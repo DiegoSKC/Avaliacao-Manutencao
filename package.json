@@ -1,0 +1,30 @@
+{
+  "name": "avaliacao-manutencao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "npm i --omit=dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoSKC/Avaliacao-Manutencao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoSKC/Avaliacao-Manutencao/issues"
+  },
+  "homepage": "https://github.com/DiegoSKC/Avaliacao-Manutencao#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1",
+    "nodemon": "^3.1.7"
+  }
+}
