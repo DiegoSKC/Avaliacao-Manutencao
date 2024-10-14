@@ -1,17 +1,18 @@
-import e from "express"
-import "dotenv/config"
-import "./config/db.js" 
-import oficina_router from "./routes/oficina_route.js"
-import veiculo_router from "./routes/veiculo_route.js"
-import manutencao_router from "./routes/manutencao_route.js"
+import e from "express";
+import workshop_router from "./routers/workshop_router.js";
+import vehicle_router from "./routers/vehicle_router.js";
+import maintenance_router from "./routers/maintenance_router.js";
+import "dotenv/config";
+import "./config/db.js";
 
+const app = e();
 
-const app = e()
+app.use(e.json());
 
-app.use(e.json())
+app.use("/workshop", workshop_router);
+app.use("/vehicle", vehicle_router);
+app.use("/maintenance", maintenance_router);
 
-app.use("/oficina", oficina_router)
-app.use("/veiculo", veiculo_router)
-app.use("/manutencao", manutencao_router)
-
-app.listen(process.env.API_PORT, () => console.log("servidor rodando"))
+app.listen(process.env.API_PORT, () =>
+  console.log("Servidor conectado com sucesso!")
+);
